@@ -4,7 +4,7 @@ A platform for drafting common legal agreements.
 
 ## Status
 
-This project is in early development. Setup and usage instructions will be added as the codebase takes shape.
+**In Progress** — expected completion in 1 week (by 2026-09-29). Setup and usage instructions will be added as the codebase takes shape.
 
 ## License  
 

@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "placeholder_syntax": "{{field_name}}",
+  "field_types": ["string", "text", "date", "integer", "number", "money", "address"],
+  "templates": [
+    {
+      "id": "mutual-nda",
+      "title": "Mutual Non-Disclosure Agreement",
+      "category": "confidentiality",
+      "description": "Two parties exchange confidential information and both agree to protect it.",
+      "file": "mutual-nda.md",
+      "fields": [
+        { "name": "effective_date", "label": "Effective date", "type": "date", "required": true },
+        { "name": "party_a_name", "label": "Party A legal name", "type": "string", "required": true },
+        { "name": "party_a_entity_type", "label": "Party A entity type", "type": "string", "required": true, "example": "Delaware corporation" },
+        { "name": "party_a_address", "label": "Party A address", "type": "address", "required": true },
+        { "name": "party_a_signatory_name", "label": "Party A signatory name", "type": "string", "required": true },
+        { "name": "party_a_signatory_title", "label": "Party A signatory title", "type": "string", "required": true },
+        { "name": "party_b_name", "label": "Party B legal name", "type": "string", "required": true },
+        { "name": "party_b_entity_type", "label": "Party B entity type", "type": "string", "required": true, "example": "limited liability company" },
+        { "name": "party_b_address", "label": "Party B address", "type": "address", "required": true },
+        { "name": "party_b_signatory_name", "label": "Party B signatory name", "type": "string", "required": true },
+        { "name": "party_b_signatory_title", "label": "Party B signatory title", "type": "string", "required": true },
+        { "name": "purpose", "label": "Purpose of disclosure", "type": "text", "required": true, "example": "evaluating a potential business partnership" },
+        { "name": "term_years", "label": "Agreement term (years)", "type": "integer", "required": false, "default": 2 },
+        { "name": "confidentiality_period_years", "label": "Confidentiality period after term (years)", "type": "integer", "required": false, "default": 3 },
+        { "name": "governing_law", "label": "Governing law", "type": "string", "required": true, "example": "the State of New York" }
+      ]
+    },
+    {
+      "id": "one-way-nda",
+      "title": "Non-Disclosure Agreement (One-Way)",
+      "category": "confidentiality",
+      "description": "One party discloses confidential information and the other agrees to protect it.",
+      "file": "one-way-nda.md",
+      "fields": [
+        { "name": "effective_date", "label": "Effective date", "type": "date", "required": true },
+        { "name": "discloser_name", "label": "Discloser legal name", "type": "string", "required": true },
+        { "name": "discloser_address", "label": "Discloser address", "type": "address", "required": true },
+        { "name": "discloser_signatory_name", "label": "Discloser signatory name", "type": "string", "required": true },
+        { "name": "recipient_name", "label": "Recipient legal name", "type": "string", "required": true },
+        { "name": "recipient_address", "label": "Recipient address", "type": "address", "required": true },
+        { "name": "recipient_signatory_name", "label": "Recipient signatory name", "type": "string", "required": true },
+        { "name": "purpose", "label": "Purpose of disclosure", "type": "text", "required": true, "example": "evaluating a proposed software licensing arrangement" },
+        { "name": "confidentiality_period_years", "label": "Confidentiality period (years)", "type": "integer", "required": false, "default": 3 },
+        { "name": "governing_law", "label": "Governing law", "type": "string", "required": true, "example": "the State of California" }
+      ]
+    },
+    {
+      "id": "independent-contractor-agreement",
+      "title": "Independent Contractor Agreement",
+      "category": "services",
+      "description": "Engages an individual or business to perform defined services as a non-employee.",
+      "file": "independent-contractor-agreement.md",
+      "fields": [
+        { "name": "effective_date", "label": "Effective date", "type": "date", "required": true },
+        { "name": "end_date", "label": "End date", "type": "date", "required": true },
+        { "name": "client_name", "label": "Client legal name", "type": "string", "required": true },
+        { "name": "client_address", "label": "Client address", "type": "address", "required": true },
+        { "name": "client_signatory_name", "label": "Client signatory name", "type": "string", "required": true },
+        { "name": "client_signatory_title", "label": "Client signatory title", "type": "string", "required": true },
+        { "name": "contractor_name", "label": "Contractor legal name", "type": "string", "required": true },
+        { "name": "contractor_address", "label": "Contractor address", "type": "address", "required": true },
+        { "name": "services_description", "label": "Description of services", "type": "text", "required": true },
+        { "name": "compensation", "label": "Compensation", "type": "text", "required": true, "example": "$75 per hour" },
+        { "name": "invoice_frequency", "label": "Invoice frequency", "type": "string", "required": false, "default": "monthly" },
+        { "name": "payment_terms_days", "label": "Payment terms (days)", "type": "integer", "required": false, "default": 30 },
+        { "name": "termination_notice_days", "label": "Termination notice (days)", "type": "integer", "required": false, "default": 14 },
+        { "name": "governing_law", "label": "Governing law", "type": "string", "required": true, "example": "the State of Texas" }
+      ]
+    },
+    {
+      "id": "consulting-services-agreement",
+      "title": "Consulting Services Agreement",
+      "category": "services",
+      "description": "Master agreement for ongoing consulting work, with scope defined in statements of work.",
+      "file": "consulting-services-agreement.md",
+      "fields": [
+        { "name": "effective_date", "label": "Effective date", "type": "date", "required": true },
+        { "name": "client_name", "label": "Client legal name", "type": "string", "required": true },
+        { "name": "client_entity_type", "label": "Client entity type", "type": "string", "required": true, "example": "Delaware corporation" },
+        { "name": "client_address", "label": "Client address", "type": "address", "required": true },
+        { "name": "client_signatory_name", "label": "Client signatory name", "type": "string", "required": true },
+        { "name": "client_signatory_title", "label": "Client signatory title", "type": "string", "required": true },
+        { "name": "consultant_name", "label": "Consultant legal name", "type": "string", "required": true },
+        { "name": "consultant_entity_type", "label": "Consultant entity type", "type": "string", "required": true, "example": "sole proprietorship" },
+        { "name": "consultant_address", "label": "Consultant address", "type": "address", "required": true },
+        { "name": "consultant_signatory_name", "label": "Consultant signatory name", "type": "string", "required": true },
+        { "name": "consultant_signatory_title", "label": "Consultant signatory title", "type": "string", "required": true },
+        { "name": "term_months", "label": "Initial term (months)", "type": "integer", "required": false, "default": 12 },
+        { "name": "hourly_rate", "label": "Hourly rate", "type": "money", "required": true, "example": "$150" },
+        { "name": "payment_terms_days", "label": "Payment terms (days)", "type": "integer", "required": false, "default": 30 },
+        { "name": "termination_notice_days", "label": "Termination notice (days)", "type": "integer", "required": false, "default": 30 },
+        { "name": "initial_scope_of_work", "label": "Initial statement of work", "type": "text", "required": true },
+        { "name": "governing_law", "label": "Governing law", "type": "string", "required": true, "example": "the State of Delaware" }
+      ]
+    },
+    {
+      "id": "employment-offer-letter",
+      "title": "Employment Offer Letter",
+      "category": "employment",
+      "description": "At-will offer of employment setting out position, start date, and compensation.",
+      "file": "employment-offer-letter.md",
+      "fields": [
+        { "name": "offer_date", "label": "Offer date", "type": "date", "required": true },
+        { "name": "company_name", "label": "Company legal name", "type": "string", "required": true },
+        { "name": "candidate_name", "label": "Candidate full name", "type": "string", "required": true },
+        { "name": "candidate_address", "label": "Candidate address", "type": "address", "required": true },
+        { "name": "job_title", "label": "Job title", "type": "string", "required": true },
+        { "name": "manager_name", "label": "Reporting manager", "type": "string", "required": true },
+        { "name": "work_location", "label": "Work location", "type": "string", "required": true, "example": "remote" },
+        { "name": "employment_type", "label": "Employment type", "type": "string", "required": false, "default": "full-time" },
+        { "name": "start_date", "label": "Start date", "type": "date", "required": true },
+        { "name": "base_salary", "label": "Base salary", "type": "money", "required": true, "example": "$95,000 per year" },
+        { "name": "paid_time_off", "label": "Paid time off", "type": "string", "required": false, "default": "15 days" },
+        { "name": "acceptance_deadline", "label": "Acceptance deadline", "type": "date", "required": true },
+        { "name": "signatory_name", "label": "Company signatory name", "type": "string", "required": true },
+        { "name": "signatory_title", "label": "Company signatory title", "type": "string", "required": true },
+        { "name": "governing_law", "label": "Governing law", "type": "string", "required": true, "example": "the State of Washington" }
+      ]
+    },
+    {
+      "id": "promissory-note",
+      "title": "Promissory Note",
+      "category": "finance",
+      "description": "Borrower's written promise to repay a loan with simple interest by a maturity date.",
+      "file": "promissory-note.md",
+      "fields": [
+        { "name": "effective_date", "label": "Date of note", "type": "date", "required": true },
+        { "name": "principal_amount", "label": "Principal amount", "type": "money", "required": true, "example": "$10,000.00" },
+        { "name": "borrower_name", "label": "Borrower legal name", "type": "string", "required": true },
+        { "name": "borrower_address", "label": "Borrower address", "type": "address", "required": true },
+        { "name": "lender_name", "label": "Lender legal name", "type": "string", "required": true },
+        { "name": "lender_address", "label": "Lender address", "type": "address", "required": true },
+        { "name": "interest_rate_percent", "label": "Annual interest rate (%)", "type": "number", "required": true, "example": 5 },
+        { "name": "repayment_schedule", "label": "Repayment schedule", "type": "text", "required": true, "example": "in 12 equal monthly installments beginning on the first day of the month after the date of this Note" },
+        { "name": "maturity_date", "label": "Maturity date", "type": "date", "required": true },
+        { "name": "grace_period_days", "label": "Grace period (days)", "type": "integer", "required": false, "default": 10 },
+        { "name": "late_fee", "label": "Late fee", "type": "money", "required": false, "default": "$25.00" },
+        { "name": "governing_law", "label": "Governing law", "type": "string", "required": true, "example": "the State of Illinois" }
+      ]
+    }
+  ]
+}

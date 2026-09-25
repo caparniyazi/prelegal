@@ -1,0 +1,5 @@
+# IDE config
+.idea/
+
+# Personal Claude Code settings (shared settings live in .claude/settings.json)
+.claude/settings.local.json

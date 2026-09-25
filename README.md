@@ -22,6 +22,10 @@ To check that the catalog and template files agree (every placeholder declared, 
 python scripts/validate_templates.py
 ```
 
+## Mutual NDA Creator (Prototype)
+
+The `frontend/` directory contains a Next.js app. Users fill in a form, see the Mutual NDA from the template dataset update as they type, and download the completed agreement as a PDF. See [`frontend/README.md`](frontend/README.md) for setup.
+
 > These templates are general starting points and are not legal advice. Have a qualified attorney review them for your jurisdiction and circumstances.
 
 ## License  
